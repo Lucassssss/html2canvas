@@ -6,7 +6,19 @@
 
 <script>
 export default {
-  name: 'app'
+  name: 'app',
+  mounted: function () {
+    
+  },
+  created: function () {
+    var APP_ID = 'RSbP3AwLHWlq4m9Vik2hU25R-gzGzoHsz';
+    var APP_KEY = 'W9iJQBgprEVAvRTWKGbioPhk';
+
+    AV.init({
+      appId: APP_ID,
+      appKey: APP_KEY
+    });
+  }
 }
 </script>
 
@@ -34,13 +46,13 @@ a {
 }
 
 .link {
-  color: #42b983;
+  color: #f36565;
 }
 
 .btn{
   display: inline-block;
   border: none;
-  background: #42b983;
+  background: #fc6a6a;
   color: #fff;
   height: 36px;
   line-height: 36px;
@@ -51,6 +63,6 @@ a {
   font-weight: 500;
 }
 .btn:hover{
-  background: #39a574;
+  background: #f36565;
 }
 </style>
